@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/static/js/main.f764e7e7.chunk.js",
+    "main.js.map": "/static/js/main.f764e7e7.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.44bd544c.chunk.js": "/static/js/2.44bd544c.chunk.js",
+    "static/js/2.44bd544c.chunk.js.map": "/static/js/2.44bd544c.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.3c0e7d156a76d14d21982611c9ea4300.js": "/precache-manifest.3c0e7d156a76d14d21982611c9ea4300.js",
+    "service-worker.js": "/service-worker.js",
+    "static/media/Myboox_logo_800.png": "/static/media/Myboox_logo_800.eb875cd0.png",
+    "static/media/fira-bold.woff2": "/static/media/fira-bold.2ecb426f.woff2",
+    "static/media/fira-light.woff2": "/static/media/fira-light.b39aa336.woff2",
+    "static/media/fira-normal.woff2": "/static/media/fira-normal.78773521.woff2",
+    "static/media/fontawesome-webfont.eot": "/static/media/fontawesome-webfont.674f50d2.eot",
+    "static/media/fontawesome-webfont.svg": "/static/media/fontawesome-webfont.912ec66d.svg",
+    "static/media/fontawesome-webfont.woff2": "/static/media/fontawesome-webfont.af7ae505.woff2",
+    "static/media/fontawesome-webfont.ttf": "/static/media/fontawesome-webfont.b06871f2.ttf",
+    "static/media/fontawesome-webfont.woff": "/static/media/fontawesome-webfont.fee66e71.woff"
+  }
+}
