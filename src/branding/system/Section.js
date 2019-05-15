@@ -24,8 +24,7 @@ const sectionTheme = createTheme({
 	`,
 
 	dropShadow: css`
-		// Not supported by Prince PDF:
-		// box-shadow: 0px 7px 20px -8px rgba(0,0,0,0.5);
+		box-shadow: 0px 3px 10px -8px rgba(0,0,0,0.5);
 	`,
 
 	borderRadius: css`
@@ -65,7 +64,7 @@ sectionTheme.addVariation('whiteOnPink', {
 	`,
 
 	themeBackground: css`
-		background-color: ${Color.fontoPink};
+		background-color: ${Color.hardOranje};
 	`,
 	// Gives the section a slight background meant to go with the theme foreground color
 	themeBorder: css`

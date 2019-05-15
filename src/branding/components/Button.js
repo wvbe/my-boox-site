@@ -20,14 +20,14 @@ export default function Button ({
 	small,
 	padding = small ? 'tiny' : 'small',
 
-	colorName = 'black',
-	activeColorName = colorName,
+	colorName = 'white',
+	activeColorName = 'hardWit',
 
-	backgroundColorName = 'transparent',
-	activeBackgroundColorName = 'greenHighlight',
+	backgroundColorName = 'hardOranje',
+	activeBackgroundColorName = 'zachtOranje',
 
-	borderColorName = colorName,
-	activeBorderColorName = activeBackgroundColorName,
+	borderColorName = 'hardOranje',
+	activeBorderColorName = 'hardOranje',
 
 	children,
 	label,
@@ -65,6 +65,7 @@ export default function Button ({
 	>
 		{
 			iconBefore && <Icon
+				dropShadow={ sectionProps.dropShadow }
 				name={iconBefore}
 				colorName={ isHovered ? activeColorName || colorName : colorName }
 			/>
@@ -78,6 +79,8 @@ export default function Button ({
 					noWrap={ noWrap }
 					ellipsis={ ellipsis }
 					slightlySmaller={small}
+					slightlyBold
+					dropShadow={ sectionProps.dropShadow }
 				>{ label }</Typography> :
 				children
 		}

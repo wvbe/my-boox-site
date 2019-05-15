@@ -20,7 +20,3 @@ export const lengthInUnits = {
 	...lengths,
 	[lengthName]: lengthInUnits[lengthName] + lengthUnit
 }), {});
-
-injectGlobal`
-	@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700|Ubuntu:300,400,700|Ubuntu+Mono');
-`;

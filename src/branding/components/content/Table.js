@@ -26,7 +26,7 @@ const themes = createTheme({
 
 themes.addVariation('whiteOnPink', {
 	themeBackground: css`
-		background-color: ${Color.fontoPink};
+		background-color: ${Color.hardOranje};
 	`,
 
 	cellStyling: css`

@@ -57,6 +57,9 @@ const themes = createTheme({
 	italic: css`
 		font-style: italic;
 	`,
+	dropShadow: css`
+		text-shadow: 0px 0.05em 0.1em rgba(0,0,0, 0.5);
+	`,
 	underline: css`
 		text-decoration: underline;
 	`,
@@ -91,7 +94,7 @@ const themes = createTheme({
 	`,
 
 	interactive: css`
-		color: ${Color.fontoPink};
+		color: ${Color.hardOranje};
 		text-decoration: underline;
 	`,
 

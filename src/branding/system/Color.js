@@ -1,11 +1,15 @@
 export default class Color {
 // Fonto's palette
 	// https://artboard.pilcro.com/public?id=eda62545-cc16-42b9-856e-4d9194605536
-	static fontoPink = '#193559';
+	static hardWit = '#ffffff';
+	static hardOranje = '#d76837';
+	static donkerHardOranje = '#ac4619';
+	static zachtOranje = '#ebb043';
+	static anthraciet = '#414141';
+	static lichtGrijs = '#d2d3d5';
+
 	static fontoPurple = '#1F5373';
-
 	static fontoSilver = '#BFB8AA';
-
 
 	// Who says invisible is not a color
 	static transparent = 'transparent';

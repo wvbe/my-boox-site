@@ -1,34 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-// https://color.adobe.com/nl/search?q=reliable
-// <palette>
-// 	<color name=Portrait-of-two-silly-engineers-1 rgb='193559' r='24' g='52' b='89' />
-// 	<color name=Portrait-of-two-silly-engineers-2 rgb='1F5373' r='30' g='82' b='114' />
-// 	<color name=Portrait-of-two-silly-engineers-3 rgb='F2F2F0' r='241' g='242' b='239' />
-// 	<color name=Portrait-of-two-silly-engineers-4 rgb='BFB8AA' r='191' g='183' b='170' />
-// 	<color name=Portrait-of-two-silly-engineers-5 rgb='A67665' r='165' g='118' b='101' />
-// </palette>
 import {
 	css,
-	length,
 	Section,
 	Typography
 } from './branding/system';
+
 import {
 	Paragraph,
-	List,
-	ListItem
+	Button,
+	Icon
 } from './branding/components';
-import { LoremIpsum } from 'lorem-ipsum';
 
-const lorem = new LoremIpsum();
+import logoUrl from './Myboox_logo_800.png';
+
 function App() {
 	return <Section
 		themeTypography
 		themeBackground
 		horizontal
+		align='center'
+		verticalAlign='center'
 		className={css`
 			position: absolute;
 			top: 0;
@@ -37,36 +29,65 @@ function App() {
 			bottom: 0;
 		`}
 	>
-		<Section align='center' verticalAlign='center' className={css`
-			width: 50%;
-		`}>
-			<Section>
-				<Typography extraLarge colorName='black'>MyBoox</Typography>
-				<Typography>(t1) { lorem.generateWords(2)}</Typography>
+	<Section horizontal spaceBetween='large'>
+		<Section fluid padding='medium'>
+			<Section className={{width: '100%', maxWidth: '400px' }} vertical spaceBetween='small'>
+				<img
+					src={logoUrl}
+					alt='MyBoox logo'
+					// @TODO: Resize the actual image too
+					style={{ width: '300px', marginBottom: 0 }}
+				/>
+
+				<Typography slightlyBold>Boekhouding opgelost. Erg praktisch.</Typography>
+
+				<Section spaceBetween='small' horizontal>
+					<Button
+						label={'Neem contact op'}
+						iconBefore='comment'
+						dropShadow
+					/>
+					<Button
+						label={'Ga naar e-boekhouding'}
+						iconBefore='rocket'
+						dropShadow
+					/>
+				</Section>
+
+				<Section horizontal spaceBetween='small'>
+					<Section>
+						<Icon dimmed name='envelope-o' /><Typography dimmed inline slightlyBold slightlySmaller> vraag@myboox.nl</Typography>
+					</Section>
+					<Section>
+						<Icon dimmed name='whatsapp' /><Typography dimmed inline slightlyBold slightlySmaller> 06 - 1234 5678</Typography>
+					</Section>
+					<Section>
+						<Icon dimmed name='whatsapp' /><Typography dimmed inline slightlyBold slightlySmaller> 06 - 0987 6543</Typography>
+					</Section>
+				</Section>
 			</Section>
 		</Section>
 
-		<Section vertical verticalAlign='center' fluid className={`
-			padding: 4em 4em 4em 0;
-		`}>
-			<Section className={`
-				margin: ${length.medium} 0;
-			`}>
-				<Typography slightlyBold>(t2){ lorem.generateWords(1)}</Typography>
-				<Paragraph>(t3){ lorem.generateSentences(2)}</Paragraph>
-			</Section>
+		<Section align='center' verticalAlign='center' fluid padding='medium'>
+			<Section className={{width: '100%', maxWidth: '400px' }} spaceBetween='medium'>
+				<Section>
+					<Typography extraBold slightlySmaller>FACILITEERT</Typography>
+					<Paragraph>Wij bieden jou de ruimte je op je werk te concentreren.</Paragraph>
+				</Section>
 
-			<Section className={`
-				margin: ${length.medium} 0;
-			`}>
-				<Typography slightlyBold>(t4){ lorem.generateWords(1)}</Typography>
-				<Paragraph>(t5){ lorem.generateSentences(1)}</Paragraph>
-				<List>{
-					Array.from(new Array(3)).map((x, i) => <ListItem key={ i }>{lorem.generateWords(3)}</ListItem>)
-				}</List>
+				<Section>
+					<Typography extraBold slightlySmaller>ASSISTEERT</Typography>
+					<Paragraph>De administratie? Die nemen wij voor rekening.</Paragraph>
+				</Section>
+
+				<Section>
+					<Typography extraBold slightlySmaller>REGISSEERT</Typography>
+					<Paragraph>Met onze tips haal je het beste uit jouw onderneming.</Paragraph>
+				</Section>
 			</Section>
 		</Section>
-	</Section>;
+	</Section>
+</Section>;
 }
 
 export default App;

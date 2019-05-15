@@ -1,11 +1,6 @@
 import React from 'react';
 
-import { injectGlobal, Typography } from '../../system';
-
-
-injectGlobal`
-	@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-`;
+import { injectGlobal, css, Typography } from '../../system';
 
 export default function Icon ({ name, className, ...typographyProps }) {
 	return <Typography

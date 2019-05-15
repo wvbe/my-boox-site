@@ -24,7 +24,7 @@ export default function Heading ({
 }) {
 	return <Typography
 		// As the headings level increases they get smaller, bolder and finally dimmer
-		colorName={ level === 0 ? 'fontoPink' : null}
+		colorName={ level === 0 ? 'hardOranje' : null}
 		extraExtraLarge={ level === 0}
 		extraLarge={ level === 1}
 		slightlyBold={ level >= 1 }
