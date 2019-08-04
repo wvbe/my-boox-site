@@ -2,6 +2,12 @@ import {
 	injectGlobal
 } from 'emotion';
 
+injectGlobal(`
+	a {
+		text-decoration: inherit;
+	}
+`);
+
 export {
 	css,
 	keyframes,

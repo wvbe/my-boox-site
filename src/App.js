@@ -31,38 +31,42 @@ function App() {
 	>
 	<Section horizontal spaceBetween='large'>
 		<Section fluid padding='medium'>
-			<Section className={{width: '100%', maxWidth: '400px' }} vertical spaceBetween='small'>
-				<img
-					src={logoUrl}
-					alt='MyBoox logo'
-					// @TODO: Resize the actual image too
-					style={{ width: '300px', marginBottom: 0 }}
-				/>
-
-				<Typography slightlyBold>Boekhouding opgelost. Erg praktisch.</Typography>
-
-				<Section spaceBetween='small' horizontal>
-					<Button
-						label={'Neem contact op'}
-						iconBefore='comment'
-						dropShadow
+			<Section className={{width: '100%', maxWidth: '400px' }} vertical spaceBetween='large'>
+				<div>
+					<img
+						src={logoUrl}
+						alt='MyBoox logo'
+						// @TODO: Resize the actual image too
+						style={{ width: '300px', marginBottom: 0 }}
 					/>
-					<Button
-						label={'Ga naar e-boekhouding'}
-						iconBefore='rocket'
-						dropShadow
-					/>
-				</Section>
 
-				<Section horizontal spaceBetween='small'>
-					<Section>
-						<Icon dimmed name='envelope-o' /><Typography dimmed inline slightlyBold slightlySmaller> vraag@myboox.nl</Typography>
+					<Typography slightlyBold>at your service</Typography>
+				</div>
+				<Section spaceBetween='small'>
+					<Section spaceBetween='small' horizontal>
+						<Button
+							label={'Neem contact op'}
+							iconBefore='comment'
+							dropShadow
+						/>
+						<Button
+							label={'Ga naar e-boekhouding'}
+							href={'https://secure.e-Boekhouden.nl/bh/default.asp?PRTNR=D8D7F339-6278-4D1C-9382-693B2B4FFAF8'}
+							iconBefore='rocket'
+							dropShadow
+						/>
 					</Section>
-					<Section>
-						<Icon dimmed name='whatsapp' /><Typography dimmed inline slightlyBold slightlySmaller> 06 - 1234 5678</Typography>
-					</Section>
-					<Section>
-						<Icon dimmed name='whatsapp' /><Typography dimmed inline slightlyBold slightlySmaller> 06 - 0987 6543</Typography>
+
+					<Section horizontal spaceBetween='small'>
+						<Section>
+							<Icon dimmed name='envelope-o' /><Typography dimmed inline slightlyBold slightlySmaller> vraag@myboox.nl</Typography>
+						</Section>
+						<Section>
+							<Icon dimmed name='whatsapp' /><Typography dimmed inline slightlyBold slightlySmaller> 06 - 1234 5678</Typography>
+						</Section>
+						<Section>
+							<Icon dimmed name='whatsapp' /><Typography dimmed inline slightlyBold slightlySmaller> 06 - 0987 6543</Typography>
+						</Section>
 					</Section>
 				</Section>
 			</Section>
@@ -72,17 +76,17 @@ function App() {
 			<Section className={{width: '100%', maxWidth: '400px' }} spaceBetween='medium'>
 				<Section>
 					<Typography extraBold slightlySmaller>FACILITEERT</Typography>
-					<Paragraph>Wij bieden jou de ruimte je op je werk te concentreren.</Paragraph>
+					<Paragraph>Alles zo ingericht om jouw inspanningen tot het hoognodige te beperken.</Paragraph>
 				</Section>
 
 				<Section>
 					<Typography extraBold slightlySmaller>ASSISTEERT</Typography>
-					<Paragraph>De administratie? Die nemen wij voor rekening.</Paragraph>
+					<Paragraph>24/7 boekhoudkundige assistentie waar gewenst.</Paragraph>
 				</Section>
 
 				<Section>
 					<Typography extraBold slightlySmaller>REGISSEERT</Typography>
-					<Paragraph>Met onze tips haal je het beste uit jouw onderneming.</Paragraph>
+					<Paragraph>Bedrijfsprocessen ingeregeld en advieswerk op maat voor écht rendement.</Paragraph>
 				</Section>
 			</Section>
 		</Section>

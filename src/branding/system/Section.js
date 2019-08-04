@@ -103,6 +103,11 @@ function mergeStylingProps (theme, props, className = null) {
 			flex-direction: column;
 		`);
 	}
+	else {
+		rules.push(css`
+			display: block;
+		`);
+	}
 	if (props.scrollContainer) {
 		rules.push(css`
 			overflow: auto;
@@ -156,24 +161,24 @@ export default class Section extends Component {
 	static contextType = ThemeContext;
 
 	renderSection = (theme) => {
-		const { children, className, id, style, onRef, onClick, onMouseEnter, onMouseLeave, ...stylingProps } = this.props;
+		const { href, children, className, id, style, onRef, onClick, onMouseEnter, onMouseLeave, ...stylingProps } = this.props;
 
 		// Because a new theme is set, set the themeTypography also. Do not set themeBackground or themeBorder
 		if (this.props.theme) {
 			stylingProps.themeTypography = true;
 		}
 
-		return <div
-			id={ id }
-			style={ style }
-			ref={onRef}
-			onClick={onClick}
-			onMouseEnter={onMouseEnter}
-			onMouseLeave={onMouseLeave}
-			className={ mergeStylingProps(theme, stylingProps, className) }
-		>
-			{ children }
-		</div>;
+		const htmlElementName = href ? 'a' : 'div';
+		return React.createElement(htmlElementName, {
+			href,
+			id,
+			className: mergeStylingProps(theme, stylingProps, className),
+			ref: onRef,
+			style,
+			onClick,
+			onMouseEnter,
+			onMouseLeave
+		}, children);
 	}
 
 	render () {

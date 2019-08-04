@@ -191,8 +191,9 @@ export function getClassName (theme, props, className = null) {
 export default class Typography extends Component {
 	static contextType = ThemeContext;
 	render () {
-		const { children, inline, onRef, className, style, onClick, ...stylingProps } = this.props;
-		return React.createElement(inline ? 'span' : 'div', {
+		const { children, inline, onRef, className, style, href, onClick, ...stylingProps } = this.props;
+		const htmlElementName = href ? 'a' : (inline ? 'span' : 'div');
+		return React.createElement(htmlElementName, {
 			className: getClassName(this.context, stylingProps, className),
 			ref: onRef,
 			style,
